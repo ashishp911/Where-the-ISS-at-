@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where the ISS at</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+
+    <script 
+        src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin="">
+    </script>
+    
+    <style>
+        #map 
+        { 
+            height: 600px;
+        }
+        #heading
+        {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    
 </head>
 <body>
+    <div id="heading">
+        <h1>Where is the ISS rn?</h1>
+    </div>
     
+    <h3>Latitude : <span id="lat"></span>°<br>
+        Longitude : <span id="lon"></span>°<br>
+        Altitute :  <span id="alt"></span> km<br>
+        Velocity :  <span id="velo"></span> kmph<br>
+    </h3>
+    <div id="map"></div>
+    <br>
+    <p>This project does the following things</p>
+    <ol>
+        <li>
+            Fetching data from wheretheiss website using fetch and displaying the latitude, longitude, altitude and velocity of the International Space Station.
+        </li>
+        <li>
+            Importing the leaflet JS library to display a map on the browser with an icon which indicates the ISS.
+        </li>
+        <li>
+            Using the setInterval function to call the function at a desired time interval to follow the path of the ISS.
+        </li>
+    </ol>
+    <script src="backend.js" ></script>
 </body>
 </html>
